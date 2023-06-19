@@ -62,3 +62,42 @@ while(true){
     }
     
 }
+//-------------------------------------------------------------------------------
+
+function editContact(){
+    var name = prompt("enter the firstname of contact you want to Edit");
+    for(let i=0;i<array.length;i++){
+        if(array[i].firstName == name){
+            var choice = prompt("choose what you want to edit : \n1)firstName \n2)lastName \n3)Address \n4)city \n5)State \n6)Zip \n7)Phone Number \n8)Email \n");
+            switch(choice){
+                case "1":
+                    array[i].firstName=prompt("enter the firstName");
+                    break;
+                case "2":
+                    array[i].lastName = prompt("enter the lastName");
+                    break;
+                case "3":
+                    array[i].address = prompt("enter the address");
+                    break;
+                case "4":
+                    array[i].city=prompt("enter the city");
+                    break;
+                case "5":
+                    array[i].state = prompt("enter the state");
+                    break;
+                case "6":
+                    array[i].zip = prompt("enter the zip");
+                    break;
+                case "7":
+                    array[i].phoneNumber=prompt("enter the phoneNumber");
+                    break;
+                case "8":
+                    array[i].email = prompt("enter the email");
+                    break;
+                default:
+                    console.log("invalid option");
+                    break;
+            }
+        }
+    }
+}
